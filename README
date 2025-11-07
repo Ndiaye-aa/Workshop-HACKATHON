@@ -1,0 +1,119 @@
+Aqui está uma proposta de `README.md` completo para o seu projeto "StellarPledge", seguindo as melhores práticas para um hackathon. Ele é desenhado para ser lido rapidamente pelos juízes e destacar que você cumpriu todos os requisitos obrigatórios, com foco no diferencial da gamificação.
+
+-----
+
+# StellarPledge 🚀
+
+**Energize sua ideia. Uma plataforma de crowdfunding (vaquinha) gamificada e 100% on-chain, construída na Stellar.**
+
+-----
+
+### Sumário
+
+  * [Submission do Hackathon](https://www.google.com/search?q=%23submission-do-hackathon)
+  * [O Problema](https://www.google.com/search?q=%23o-problema)
+  * [A Solução: StellarPledge](https://www.google.com/search?q=%23a-solu%C3%A7%C3%A3o-stellarpledge)
+  * [A Nova Experiência (Gamificação)](https://www.google.com/search?q=%23a-nova-experi%C3%AAncia-gamifica%C3%A7%C3%A3o-%E2%9A%A1)
+  * [Stack de Tecnologia (Requisitos do Hackathon)](https://www.google.com/search?q=%23stack-de-tecnologia-requisitos-do-hackathon-%EF%B8%8F)
+  * [Principais Funcionalidades](https://www.google.com/search?q=%23principais-funcionalidades)
+  * [Links](https://www.google.com/search?q=%23links-e-demo)
+  * [Como Rodar Localmente](https://www.google.com/search?q=%23como-rodar-localmente)
+  * [Equipe](https://www.google.com/search?q=%23equipe)
+
+-----
+
+### Submission do Hackathon
+
+  * **Hackathon:** Scaffold-Stellar Hackathon (DoraHacks)
+  * **Trilha:** Inovação Aberta (com foco especial em **"Novas Interfaces & Experiências"**)
+
+### O Problema
+
+Plataformas de crowdfunding tradicionais (como Kickstarter ou Catarse) são centralizadas, cobram taxas altas (5-10%) e têm processos lentos de aprovação. Por outro lado, muitas plataformas de crowdfunding Web3 existentes são apenas "formulários DeFi", sem engajamento ou apelo visual.
+
+### A Solução: StellarPledge
+
+O **StellarPledge** é um dApp (aplicativo descentralizado) que resolve isso. Construído inteiramente na rede Stellar, ele permite que qualquer pessoa crie ou financie um projeto de forma transparente, segura e com taxas quase nulas.
+
+Mas o mais importante: nós transformamos o ato de "financiar" em uma **experiência gamificada**.
+
+### A Nova Experiência (Gamificação) ⚡
+
+No StellarPledge, você não "doa para campanhas chatas". Você **"Energiza Missões"**\!
+
+1.  **Abstração da Interface:** Trocamos a terminologia de finanças por uma linguagem de jogo.
+      * *Campanhas* ➡️ **Missões**
+      * *Apoiar/Doar* ➡️ **Energizar**
+      * *Meta Financeira* ➡️ **Nível de Energia**
+2.  **Feedback Visual Imediato:** Cada projeto é representado por um "Foguete" ou "Bateria". À medida que os fundos são enviados, a barra de energia do projeto é preenchida visualmente, incentivando os usuários a completá-la.
+3.  **Recompensas Colecionáveis (NFTs):** Ao "Energizar" uma Missão, você **automaticamente recebe um Crachá de Apoiador (NFT) na sua carteira**. Isso cria um sistema de prova social, status e um colecionável que fica na sua "Estante de Conquistas" dentro do dApp.
+
+### Stack de Tecnologia (Requisitos do Hackathon) ✔️
+
+Este projeto foi construído para atender 100% dos requisitos obrigatórios do hackathon:
+
+  * **[✅] Framework Core:** **Scaffold-Stellar** foi usado como a base de todo o projeto.
+  * **[✅] Smart Contract (On-Chain):** Toda a lógica da vaquinha (criar missão, energizar, sacar, reembolsar) é gerenciada por um **Smart Contract em Rust/Wasm** (Soroban).
+  * **[✅] Frontend (Off-Chain):** A interface de usuário foi construída com **React, TypeScript e Vite**, conforme fornecido pelo template.
+  * **[✅] Conexão de Carteira:** Toda a interação do usuário é feita através do **Stellar Wallet Kit**, permitindo conexão segura e assinatura de transações.
+
+### Principais Funcionalidades
+
+  * **🛰️ Criar uma Missão:** Qualquer pessoa pode criar uma nova missão definindo a meta (Nível de Energia) e o prazo.
+  * **⚡ Energizar um Projeto:** Qualquer usuário pode conectar sua carteira e enviar fundos (XLM) para uma missão.
+  * **🏆 Coletar Crachás (NFTs):** Receba um NFT colecionável por cada missão que você apoiar.
+  * **🚀 Lançar (Sacar Fundos):** Se a meta for atingida dentro do prazo, o criador da missão pode sacar o valor total.
+  * **♻️ Reciclar (Reembolso):** Se a missão falhar (prazo expirar sem atingir a meta), os apoiadores podem reaver 100% dos seus fundos diretamente do contrato.
+
+### Links e Demo
+
+  * **🎥 Vídeo de Pitch (Demo):** `[LINK PARA O SEU VÍDEO NO YOUTUBE/LOOM]`
+  * **🚀 Demo Ao Vivo (Vercel/Netlify):** `[LINK PARA O SITE EM PRODUÇÃO]`
+  * **📂 Repositório (Este GitHub):** `[LINK PARA O SEU REPOSITÓRIO]`
+
+### Como Rodar Localmente
+
+Este projeto usa o ambiente padrão do Scaffold-Stellar.
+
+**Pré-requisitos:**
+
+  * Docker e Docker Compose
+  * Node.js (v18+)
+  * Rust (e Soroban CLI)
+
+**1. Clone o repositório:**
+
+```bash
+git clone [URL-DO-SEU-REPO]
+cd stellar-pledge
+```
+
+**2. Inicie o ambiente local da Stellar (Docker):**
+
+```bash
+docker compose up
+```
+
+*(Isso iniciará um nó standalone da Soroban e o Soroban RPC)*
+
+**3. Instale as dependências do Frontend:**
+
+```bash
+cd frontend
+npm install
+```
+
+**4. Rode o aplicativo de desenvolvimento (Frontend):**
+
+```bash
+npm run dev
+```
+
+**5. (Em outro terminal) Compile e publique o Contrato:**
+*Os scripts para compilar e publicar o contrato Rust estão no diretório `contracts/` e podem ser executados conforme a documentação do Scaffold-Stellar.*
+
+### Equipe
+
+  * **[Seu Nome]** - Desenvolvedor Full-Stack
+  * **[Nome do Colega 2]** - Designer UX/UI
+  * **[Nome do Colega 3]** - Especialista em Smart Contracts
